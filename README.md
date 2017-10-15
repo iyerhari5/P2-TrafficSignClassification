@@ -98,9 +98,9 @@ generalize better, I used dropouts in the two fully connected layers before the 
 the training.
 
 My final model results were:
-* training set accuracy of   :99.4%
-* validation set accuracy of :97.9%
-* test set accuracy of       :96.6%
+* training set accuracy of   :99.7%
+* validation set accuracy of :98.3%
+* test set accuracy of       :96.8%
 
 
 The initial architecture I started with was the LeNet architecture. That gave around 94% validation accuracy without any data augnmentation. 
@@ -126,8 +126,8 @@ Here are the results of the prediction:
 | Slippery Road			| Wild animals Crossing  						|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
-This seems a little less than the accuracy achieved on the test set.
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
+This seems comparable to the 96.8% accuracy achieved on the test set.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -143,17 +143,7 @@ For the first image, the model is very  sure that this is a speed limit 30 km/h 
 | ~0	      			| Speed limit (20km/h)							|
 | ~0				    | Yield   										|
 
-The next three images also the model is very sure about the prediction with the most probable class having probability of ~1.0
-For the last image, where the prediction was wrong, the probabilities are as below:
-
-		  
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| 0.99        			| Bicycles crossing	 			    			| 
-| 0.007    				| Wild animals crossing							|
-| ~0					| Slippery Road							        |
-| ~0	      			| Children crossing							    |
-| ~0				    | Road narrows on the right   					|
+The next four images also the model is very sure about the prediction with the most probable class having probability of ~1.0
 
 
 ### Visualizing the Neural Network 
