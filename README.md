@@ -35,7 +35,7 @@ Here are some summary statistics of the traffic signs data set:
 * The size of training set is 34799
 * The size of the validation set is 4410
 * The size of test set is 12630
-* The shape of a traffic sign image is 32x32xx
+* The shape of a traffic sign image is 32x32x3
 * The number of unique classes/labels in the data set is 43
 
 The images below show the distribution of the classes in the training, validation and 
