@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image3]: ./examples/Distribution-Test-Set.png "Test-Train"
 [image4]: ./examples/grayscale-conversion.png "GrayScaleConversion"
 [image5]: ./examples/augmentation.png
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
+[image6]: ./examples/webImages.png
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
@@ -91,36 +91,31 @@ My final model consisted of the following layers:
 | Fully connected		| outputs 84        							|
 | RELU					|												|
 | Fully connected		| outputs 43        							|
-|:---------------------:|:---------------------------------------------:| 
 
 ### Training
 
-To train the model, I used an Adam Optimized. The training was done with 20 Epochs  and a batch size of 128. In order for the model to
+To train the model, I used an Adam Optimizer. The training was done with 20 Epochs  and a batch size of 128. In order for the model to
 generalize better, I used dropouts in the two fully connected layers before the output layer. The drop out probability was set to 0.5 during
 the training.
 
 My final model results were:
-* training set accuracy of 99.4%
-* validation set accuracy of  97.9%
-* test set accuracy of 96.6%
+* training set accuracy of   :99.4%
+* validation set accuracy of :97.9%
+* test set accuracy of       :96.6%
 
 
-The initial architecture I started with was the LeNet architecture. That gave around 92% test accuracy without any data augnmentation. 
-With the data augmnetaiton, the test accuracy improved by ~2%. Fur further improvements, I added more complexity to the model by
-increasing the number of features in the first and second convolutional layers. This resulted in increasing the test set accuracy to ~97%
+The initial architecture I started with was the LeNet architecture. That gave around 94% validation accuracy without any data augnmentation. 
+With the data augmnetaiton, the validation accuracy improved by ~2%. Fur further improvements, I added more complexity to the model by
+increasing the number of features in the first and second convolutional layers. This resulted in increasing the validation set accuracy to ~98%
 
+The model seems to generalize reasonably well giving ~97% accuracy on the test set.
 
+### Testing  Model on New Images
 
-###Test a Model on New Images
+Here are five German traffic signs that I found on the web that seem reasonably similar to images in the traning set.
+	
+![alt text][image6] 
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
