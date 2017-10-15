@@ -1,8 +1,6 @@
-**Traffic Sign Recognition** 
+## Traffic Sign Recognition
 
 ---
-
-**Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -18,8 +16,8 @@ The goals / steps of this project are the following:
 [image1]: ./examples/Distribution-Training-Set.png "Dist-Train"
 [image2]: ./examples/Distribution-Validation-Set.png "Dist-Valid"
 [image3]: ./examples/Distribution-Test-Set.png "Test-Train"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
+[image4]: ./examples/grayscale-conversion.png "GrayScaleConversion"
+[image5]: ./examples/augmentation.png
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
@@ -28,13 +26,12 @@ The goals / steps of this project are the following:
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-Writeup / README
+** Writeup / README **
 Here is a link to my [project code](https://github.com/iyerhari5/P2-TrafficSignClassification/blob/master/Traffic_Sign_Classifier.ipynb)
 
 Data Set Summary & Exploration
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+Here are some summary statistics of the traffic signs data set:
 
 * The size of training set is 34799
 * The size of the validation set is 4410
@@ -42,34 +39,36 @@ signs data set:
 * The shape of a traffic sign image is 32x32xx
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
-
-Here is an exploratory visualization of the data set. The images below show the distribution of the classes in the training, validation and 
-test data sets
+The images below show the distribution of the classes in the training, validation and 
+test data sets. As we can see, the distribution is not very uniform and there are some classes
+that are not very well represented. However the distribution seems to be similar across
+the training,validation and test datasets
 
 ![alt text][image1]
 ![alt text][image2]
 ![alt text][image3]
 
-###Design and Test a Model Architecture
+** Model Architecture **
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+The original images in the data set are color images of size 32x32. Based on results reported in the literature, I decided to
+convert the images to grayscale as the first step. This helps to reduce the dimensionality of the input space. The images are then
+normalized by a simple transformation to center the data.
 
-As a first step, I decided to convert the images to grayscale because ...
+image = (image-128.0)/128.0
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image before and after grayscaling and normalization.
 
-![alt text][image2]
+![alt text][image4]
 
-As a last step, I normalized the image data because ...
+Data Augmentation
 
-I decided to generate additional data because ... 
+As can be noted, the training set contains only around 35K images. In order to make the traning more generalizable, I decided to 
+augment the data with samples generated from the training set itself. For this I implemented functions to add translation, rotation, zooming
+and perspective projection on the images.
 
-To add more data to the the data set, I used the following techniques because ... 
+Here is an example of an original image and 4 more images augmented with the described transformation.
 
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
+![alt text][image5]
 
 The difference between the original data set and the augmented data set is the following ... 
 
