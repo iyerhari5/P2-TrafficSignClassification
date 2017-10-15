@@ -19,8 +19,7 @@ The goals / steps of this project are the following:
 [image4]: ./examples/grayscale-conversion.png "GrayScaleConversion"
 [image5]: ./examples/augmentation.png
 [image6]: ./examples/webImages.png
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image7]: ./examples/first-conv-layer.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -147,8 +146,6 @@ For the first image, the model is very  sure that this is a speed limit 30 km/h 
 The next three images also the model is very sure about the prediction with the most probable class having probability of ~1.0
 For the last image, where the prediction was wrong, the probabilities are as below:
 
-[  9.91371751e-01,   7.88148865e-03,   7.04291917e-04,
-          2.38765206e-05,   1.41851970e-05]], 
 		  
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -159,7 +156,9 @@ For the last image, where the prediction was wrong, the probabilities are as bel
 | ~0				    | Road narrows on the right   					|
 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+### Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 
+The output of the first convolutional layer was visualized with the first traffic sign image from the web as the input. As can be seen from the
+figure below, the layer seems to be activating on the edges of the speed limit letters and the circular outline.
 
+![alt text][image7]
