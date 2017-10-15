@@ -4,3 +4,12 @@ data
 models
 *.swp
 *.p
+BackupModels.txt
+checkpoint
+test_images_web/res-speedlimit-30.png
+test_images_web/res-slippery-road.png
+test_images_web/speed-limit-80.jpg
+test_images_web/res-speedlimit-80.png
+test_images_web/res-speedlimit-70.png
+test_images_web/res-go-straight-right.png
+test_images_web/res-end-of-no-passing.png
