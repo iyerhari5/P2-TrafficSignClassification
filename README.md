@@ -156,7 +156,7 @@ For the last image, where the prediction was wrong, the probabilities are as bel
 | ~0				    | Road narrows on the right   					|
 
 
-### Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
+### Visualizing the Neural Network 
 
 The output of the first convolutional layer was visualized with the first traffic sign image from the web as the input. As can be seen from the
 figure below, the layer seems to be activating on the edges of the speed limit letters and the circular outline.
