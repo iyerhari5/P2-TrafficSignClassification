@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-** Writeup / README **
+# Writeup / README 
 Here is a link to my [project code](https://github.com/iyerhari5/P2-TrafficSignClassification/blob/master/Traffic_Sign_Classifier.ipynb)
 
 Data Set Summary & Exploration
@@ -48,7 +48,7 @@ the training,validation and test datasets
 ![alt text][image2]
 ![alt text][image3]
 
-** Model Architecture **
+# Model Architecture 
 
 The original images in the data set are color images of size 32x32. Based on results reported in the literature, I decided to
 convert the images to grayscale as the first step. This helps to reduce the dimensionality of the input space. The images are then
@@ -66,11 +66,12 @@ As can be noted, the training set contains only around 35K images. In order to m
 augment the data with samples generated from the training set itself. For this I implemented functions to add translation, rotation, zooming
 and perspective projection on the images.
 
-Here is an example of an original image and 4 more images augmented with the described transformation.
+Here is an example of an original image and 4 more images generated with the described transformations from the original image.
 
 ![alt text][image5]
 
-The difference between the original data set and the augmented data set is the following ... 
+The augmented dataset hence should be more robust to differences in the pose of the camera, centering and rotation in the images 
+presented to the neural network.
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
